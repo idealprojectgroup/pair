@@ -1,4 +1,4 @@
-require 'pair/version'
+require 'pair/cli'
 
 # ## Pair
 # Command-line tool for remote pair programming

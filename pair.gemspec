@@ -22,6 +22,8 @@ Gem::Specification.new do |gem|
 
   gem.test_files = Dir.glob("spec/**/*")
 
+  gem.add_dependency 'thor', ['>= 0.18.1', '< 2']
+  gem.add_dependency 'digitalocean', '~> 0.0'
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'vcr'

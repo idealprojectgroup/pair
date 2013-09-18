@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+$:.unshift(File.expand_path('../../lib', __FILE__))
+require 'pair/cli'
+
+begin
+  Pair::CLI.start
+rescue
+  exit(1)
+end

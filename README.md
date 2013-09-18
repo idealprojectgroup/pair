@@ -3,6 +3,10 @@ Pair
 
 Pair is a Ruby gem that allows you to easily start a remote pair programming session.
 
+[![Build Status](https://travis-ci.org/idealprojectgroup/pair.png?branch=master)](https://travis-ci.org/idealprojectgroup/pair)
+[![Coverage Status](https://coveralls.io/repos/idealprojectgroup/pair/badge.png)](https://coveralls.io/r/idealprojectgroup/pair)
+[![Code Climate](https://codeclimate.com/github/idealprojectgroup/pair.png)](https://codeclimate.com/github/idealprojectgroup/pair)
+
 Usage
 -----
 

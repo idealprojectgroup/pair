@@ -1,4 +1,5 @@
 require 'thor'
+require 'pair/providers/digital_ocean'
 
 module Pair
   class CLI < Thor
@@ -6,10 +7,9 @@ module Pair
     check_unknown_options!
 
     desc "start", "Start a pair programming session."
+    method_option "api-key", aliases: "-t", type: :string, default: false, desc: "Specify API key instead of using .pairrc"
     def start
-      say "What are your Digital Ocean credentials?"
-      client_id = ask("Client ID:")
-      api_key   = ask("API Key:")
+      Pair::Providers::DigitalOcean.new(self).start
     end
     default_task :start
   end

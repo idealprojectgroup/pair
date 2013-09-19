@@ -7,9 +7,10 @@ describe Pair::CLI do
   end
 
   describe "#start" do
-    it "asks for their credentials" do
-      @cli.should_receive(:ask).with("Client ID:")
-      @cli.should_receive(:ask).with("API Key:")
+    it "designates to provider" do
+      provider = stub
+      Pair::Providers::DigitalOcean.should_receive(:new).with(@cli).and_return(provider)
+      provider.should_receive(:start)
       @cli.start
     end
   end
